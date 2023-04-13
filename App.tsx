@@ -7,8 +7,15 @@ const App = () => {
   const [active_player, setActivePlayer] = useState('X');
   const [markers, setMarkers] = useState([null, null, null, null,null, null, null, null, null]) 
 
+  useEffect(() => {
+    if(active_player === "O")
+      AIMove();
+
+  })
+  
   const AIMove = () =>
   {
+    //Seeing possible options
     
   }
 
@@ -33,6 +40,7 @@ const App = () => {
   } 
   const resetMarkers = () => {
     setMarkers([null, null, null, null,null, null, null, null, null])
+    setActivePlayer('X')
   }
   
   const calculateWinner = (square) => {
